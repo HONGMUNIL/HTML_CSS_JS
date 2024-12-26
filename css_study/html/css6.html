@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1>div>div {
+            border: 10px solid red;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+
+            &>div>div {
+                width: 50px;
+                height: 50px;
+                background-color: red;
+            }
+        }
+
+        .box1+div>div>div {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        .checkbox-group {
+            box-sizing: border-box;
+            border: 2px solid gray;
+            padding: 20px;
+
+            & input [type="checkbox"] {
+                display: none;
+            }
+
+            & input[type="checkbox"]+label {
+                display: inline-block;
+                box-sizing: border-box;
+                border: 1px solid gray;
+                padding: 5px;
+                width: 35px;
+                height: 35px;
+                background-clip: content-box;
+            }
+
+            & input[type="checkbox"] :checked+label {
+                background-color: white;
+            }
+
+        }
+
+        input[type="text"]{
+            box-sizing: border-box;
+            margin: 20px 0px;
+            outline: none;
+            border: 2px solid wheat;
+            padding: 0px 20px;
+            width: 400px;
+            height: 50px;
+        }
+
+        input[type="text"]:focus{
+                        
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <div class="box1">
+        <div>
+            <div> </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div> </div>
+        </div>
+    </div> 
+
+    <div class="checkbox-group">
+        <input type="checkbox" id="ck1">
+        <label for="ck1"> </label>
+        <label for="ck1">JAVA</label>
+        <input type="checkbox" id="ck2">
+        <label for="ck2"> </label>
+        <label for="ck2">Python </label>
+        <input type="checkbox" id="ck3">
+        <label for="ck3"> </label>
+        <label for="ck3">HTML </label>
+    </div>
+
+
+
+    <div>
+        <input type="text">
+    </div>
+
+</body>
+
+</html>

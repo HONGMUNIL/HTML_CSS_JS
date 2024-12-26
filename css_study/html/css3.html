@@ -7,23 +7,68 @@
     <style>
 
         html, body{
-            background-color: #fafafa;
+            background-color: #dbdbdb;
         }
-        div{
+        .box1{
             box-sizing: border-box;
             margin : 100px 200px;
-            border: 0px solid red;
+            border: 0px solid rgb(112, 108, 133);
             border-width: 2px 3px 4px 5px;
             border-radius: 10px 20px 30px 40px;
             width: 400px;
             height: 400px;
-            background-color: #ffffff;
-            box-shadow: 0px 0px 5px 3px #6e060644;
+            background-color: rgb(83, 81, 82);
+            box-shadow: 0px 0px 5px 3px rgb(112, 108, 133);
+        }
+        .profile-img-circle{
+            box-sizing: border-box;
+            border: 1px solid #dbdbdb;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            background-color: #eeeeee;
+        }
+        .profile-img{
+            width: 110%;
+            
+        }
+        
+        .div-button{
+            border: 2px solid #eeeeee;
+            border-radius: 30px;
+            padding: 5px 20px;
+            width: fit-content;
+            background-color: #f0f0f0;
+            font-size: 13.33333px;
+            cursor: pointer;
+        }
+        button{
+            border: 2px solid #dbdbdb;
+            border-radius: 4px;
+            padding: 5px 20px;
+            background-color: rgb(6, 74, 114);
+            cursor: pointer;
+
+            &:hover{
+               background-color: #1fadff;
+                
+            }
+
+            &:active{
+                background-color: #032f49;
+            }
         }
 
     </style>
 </head>
 <body>
-    <div></div>
+    <div class="box1">
+        <div class="profile-img-circle">
+             <img class ="profile-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvH6Qb5S4gf2YHtjay4LtyL2JWSRWHZVXlNw&s" alt="">
+        </div>
+        <button>버튼</button>
+        <div class="div-button">버튼</div>
+    </div>
 </body>
 </html>
