@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: flex-end;
     margin-bottom: 100px;
-    
+
 }
 
 .main-border {
@@ -34,27 +34,39 @@
 
 }
 
-.main-items{
+.main-items {
     margin-bottom: 12px;
     display: flex;
     flex-direction: column;
 }
-.main-item-container-1{
+
+.main-item-container-1 {
     margin: 0 40px 4px;
     width: 268px;
 
 
 }
-.main-item-container-2{
+
+.main-item-container-2 {
     margin: 0 40px 10px;
 
 
 }
+
 .main-item-container-3 {
-    margin: 10px 40px 18px;
+    margin: 5px 40px 10px;
     display: flex;
     align-items: center;
 
+  
+
+
+}
+
+.main-item-container-4 {
+    margin: 10px 40px 13px;
+    display: flex;
+    align-items: center;
     &>.side-line {
         flex-grow: 1;
         height: 1px;
@@ -68,17 +80,14 @@
         font-weight: 600;
         color: #737373;
     }
-
-
+  
 }
-.main-item-container-4{
+.main-item-container-5 {
     text-align: center;
-    font-size:14px ;
+    font-size: 14px;
+    margin-top: 6px;
 
 }
-
-
-
 .button-blue {
     display: flex;
     justify-content: center;
@@ -109,7 +118,7 @@
     border: 1px solid #dbdbdb;
 
     border-radius: 3px;
-   
+
     height: 38px;
     background-color: #fafafa;
 
@@ -152,27 +161,31 @@
     }
 
 }
-.main-item-facebook-login{
+
+.main-item-facebook-login {
     margin: 15px;
-    
+
 
 }
-.main-item-login-box{
+
+.main-item-login-box {
     align-items: center;
     text-align: center;
     display: flex;
     justify-content: center;
+
     &>a {
         font-size: 14px;
         font-weight: 600;
         color: #0095F6;
         display: flex;
-    justify-content: center;
-    align-items: center;
-   
+        justify-content: center;
+        align-items: center;
+
 
     }
-    a:hover{
+
+    a:hover {
         color: #dbdbdb;
     }
 
@@ -191,6 +204,7 @@
     }
 
 }
+
 .facebook-icon {
     display: block;
     background-image: url(https://static.cdninstagram.com/rsrc.php/v4/y5/r/TJztmXpWTmS.png);
@@ -199,19 +213,21 @@
     height: 16px;
     width: 16px;
     background-position: -414px -300px;
-   
-    
+
+
 }
 
 
-.download-link-container{
+.download-link-container {
     display: flex;
     justify-content: center;
     margin: 10px 0;
-    & > a:nth-of-type(1){
+
+    &>a:nth-of-type(1) {
         margin-right: 8px;
     }
-    & > a > img{
+
+    &>a>img {
         height: 40px;
 
     }
