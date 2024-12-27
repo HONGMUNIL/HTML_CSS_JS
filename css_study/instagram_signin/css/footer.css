@@ -1,8 +1,16 @@
+.footer{
+    height: 500px;
+  vertical-align: baseline;
+}
+
+
+
 .footer-container{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
+    margin-top: 12px;
     
 }
 
