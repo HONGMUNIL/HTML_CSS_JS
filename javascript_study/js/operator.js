@@ -86,4 +86,5 @@ if(!!name){
 console.log(null ?? "홍문일"); //홍문일
 console.log("홍문일" ?? "홍문이");//홍문일
 
+console.log(!0);
 
