@@ -33,16 +33,16 @@ const newNumbers = numbers.concat([11, 12, 13, 14, 15]);
 console.log(newNumbers);
 const newNumbers2 = [...numbers, 11, 12, 13, 14, 15]; //...은 스프레드연산 위에 concat과 동일
 console.log(newNumbers2);
-const newNumbers3 = numbers.slice(0, 5);
+const newNumbers3 = numbers.slice(0, 5); //0번인덱스부터 5번까지
 console.log(newNumbers3); //[ 1, 2, 3, 4, 5 ]
 const newNumbers4 = numbers
 .slice(0, numbers.indexOf(4))
 .concat(numbers.slice(numbers.indexOf(4) + 1));
 console.log(newNumbers4);
-const newNumbers5 = numbers.splice(3, 1);
+const newNumbers5 = numbers.splice(3, 1);//3번인덱스부터 1개를 제거하고 꺼내오겟다
 console.log(newNumbers5);
 console.log(numbers);
-const newNumbers6 = numbers.splice(4, 2, 11, 12, 13);
+const newNumbers6 = numbers.splice(4, 2, 11, 12, 13);//4번인덱스부터 2개꺼내오고 11,12,13 추가하겟다
 console.log(newNumbers6);
 console.log(numbers);
 numbers.splice(4, 0, 20, 21);

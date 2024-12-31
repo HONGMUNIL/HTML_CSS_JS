@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="text-input">
+    <input type="text" class="text-input2">
+    <button class="submit-button">확인</button>
+    <script>
+
+        let data = {
+            text1: "",
+            text2: "",
+        }
+
+        function handelInputOnChange(event) {
+            const inputElement = document.querySelector(".text-input");
+            data  = [
+                ...data,
+                text1, inputElement.value,
+            ]
+            console.log(value);
+        }
+
+
+        function handelInputOnChange2(event) {
+            console.log(event);
+        }
+
+
+        function handleSubmitOnClick() {
+            console.log("버튼클릭");
+        }
+
+
+        window.onload = () => {
+            const textInputElement = document.querySelector(".text-input");
+            const textInputElement2 = document.querySelector(".text-input2");
+            const submitButtonElement = document.querySelector(".submit-button")
+            textInputElement.onkeyup = handelInputOnChange;
+            textInputElement2.onkeyup = handelInputOnChange2;
+            submitButtonElement.onclick = handleSubmitOnClick;     
+        }
+    </script>
+</body>
+
+</html>

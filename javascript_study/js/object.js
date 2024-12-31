@@ -18,8 +18,7 @@ const obj2 = {
     print: ()=> console.log(`이름: ${obj.name}, 나이:${obj.age}`),
 }
 
-
-console.log(obj ===obj2); //false
+console.log(obj ===obj2); //false 주소가다르다!!
 console.log(JSON.stringify(obj) === JSON.stringify(obj2)); //true 문자열이 같은가
 console.log(typeof JSON.stringify(obj));
 
@@ -50,10 +49,10 @@ obj3.name="홍문일"
 obj3.password=123;
 obj3.username="Moon"
 
-const objJSON = JSON.stringify(obj3);
+const objJSON = JSON.stringify(obj3);//함수가 사라진다 JSON형태로 바꾸는것
 console.log(obj3);
 console.log(objJSON);
-const convertObj = JSON.parse(objJSON);
+const convertObj = JSON.parse(objJSON); //JSON형태를 다시 문자열로!
 console.log(convertObj.email);
 console.log(convertObj);
 

@@ -18,3 +18,4 @@ c= "c2 data";
 console.log(c);//c2 data
 const d = "d data"; //상수
 console.log(d); //d data
+
