@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
-        .img-box{
+        .img-box {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -19,44 +18,45 @@
             overflow: hidden;
             cursor: pointer;
 
-            & > img{
+            & > img {
                 height: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <div class = "img-box" onclick="handleImgChangeOnClick()">
+    <div class="img-box">
         <img src="" alt="">
-
     </div>
 
     <script>
         let currentIndex = 0;
-        
+
         const urlList = [
-         "https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAxNzA5MTlfNDYg%2FMDAxNTA1ODA2NTUyMzk1.cQSAhlJ1FqWlkLmKHp8rBlhIopxsGi9HqYywq94Wiagg.BBuuaJdbnsGL4JXMQsmtIiaLhnnAGrmtD-9eCqZGDGsg.JPEG.dnjssudwkd12%2Fww.JPG&type=sc960_832"
-        ,"https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA2MTBfNCAg%2FMDAxNjg2MzM3MDk3MzUz.ZkcIf8ntDViogWoK1FL1lAnQGKduhziWuXOlWAxRkfog.hsK6GAyciEdBG4GJrAMNI9xGG0kvPhvnX3iEPbUE6MMg.JPEG.qwndrnjs42%2FIMG_0555.jpg&type=a340"
-        ,"https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA4MjdfMTUx%2FMDAxNjkzMDk5MjU0MjA5.ygt4S_SSg-9KXQLZU8rL1AjVVkq_xFc6rCKuOz5O1Wog.sERH30R1VLLC0-jERLnC4Plc5GV8m-IYZRCFvF_7Rp0g.JPEG.a0703a%2FIMG_4206.JPG&type=sc960_832"
-        ,"https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA2MjZfMjYz%2FMDAxNjg3NzQxNzA0MDQ2.xjAlToZU4RUiER5DZwm_U67NSrePHouTetdoNe0bQu8g.nXuQ843it1SQ0w2u8j0JgdUuuVrBEfCSMVj6mIHG1lwg.JPEG.hsjhsjp%2F%25C2%25A1%25C2%25A1%25C0%25CC010-20230626-100801.JPG&type=a340"
-         ]
-        function handleImgChangeOnClick(){
-            alert("변경!!")
-            if(currentIndex < urlList.length-1 ){
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7OrtM7FfDgFfgOmRqL4R__bU5cjx1ltwy1A&s",
+            "https://velog.velcdn.com/images/ymh0951/post/ec877c43-d72f-45b3-8c37-46be92d92fa5/image.png",
+            "https://velog.velcdn.com/images/manimm1/post/085da37f-eb14-4bce-b6f7-f947d7273d88/image.png",
+            "https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg?tx=w_1920,q_auto",
+        ]
+
+        
+
+        function handleImgChangeOnClick() {
+            if(currentIndex < urlList.length - 1) {
                 currentIndex++;
-            }else{
+            } else {
                 currentIndex = 0;
             }
-             const imgElement = document.querySelector(".img-box > img");
-            imgElement.src = urlList[currentIndex];
-        }
-        window.onload = () =>{
             const imgElement = document.querySelector(".img-box > img");
             imgElement.src = urlList[currentIndex];
-          
         }
 
+        window.onload = () => {
+            const imgElement = document.querySelector(".img-box > img");
+            imgElement.src = urlList[currentIndex];
+            const imgBoxElement = document.querySelector(".img-box");
+            imgBoxElement.onclick = handleImgChangeOnClick;
+        }
     </script>
-
 </body>
 </html>

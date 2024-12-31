@@ -18,33 +18,52 @@
             text2: "",
         }
 
-        function handelInputOnChange(event) {
+        function handleInputOnKeyDown(e){
+            if(e.keyCode !== 13){
+                return;
+            }
+            const nextInput = document.querySelector(".text-input2");
+            nextInput.focus();
+        }
+        function handleInputOnKeyDown2(e){
+            if(e.keyCode !== 13){
+                return;
+            }
+            const submitButton = document.querySelector(".submit-button");
+            submitButton.click();
+        }
+
+
+        function handelInputOnChange() {
             const inputElement = document.querySelector(".text-input");
-            data  = [
+            data = {
                 ...data,
-                text1, inputElement.value,
-            ]
-            console.log(value);
+                text1: inputElement.value,
+            }
+        }
+        function handelInputOnChange2(e) {
+            data = {
+                ...data,
+                text2: e.target.value,
+            }
         }
 
-
-        function handelInputOnChange2(event) {
-            console.log(event);
+        function handleSubmitOnClick(e) {
+          //  if (e.ctrlKey && e.shiftKey) {
+          //      console.log(data);
+          //  }
+          //  console.log(e);
+            console.log(data);
         }
-
-
-        function handleSubmitOnClick() {
-            console.log("버튼클릭");
-        }
-
-
         window.onload = () => {
             const textInputElement = document.querySelector(".text-input");
             const textInputElement2 = document.querySelector(".text-input2");
             const submitButtonElement = document.querySelector(".submit-button")
             textInputElement.onkeyup = handelInputOnChange;
             textInputElement2.onkeyup = handelInputOnChange2;
-            submitButtonElement.onclick = handleSubmitOnClick;     
+            submitButtonElement.onclick = handleSubmitOnClick;
+            textInputElement.onkeydown = handleInputOnKeyDown;
+            textInputElement2.onkeydown = handleInputOnKeyDown2;
         }
     </script>
 </body>
