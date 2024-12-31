@@ -17,7 +17,8 @@ const user3 = {
 
 const users = [ user1, user2, user3 ];
 
-const usersInfoString = users.map(user => `사용자명: ${user.username} 비밀번호: ${user.password}`);
+const usersInfoString = users.map(user => 
+    `사용자명: ${user.username} 비밀번호: ${user.password}`);
 const userComponents = users.map(user =>
     `
     <label>사용자이름</lable>
@@ -36,8 +37,8 @@ console.log(users2);
 const users3 = users.map(user => {
     if(user.username ==="bbb"){
         return {
-            username: "ddd",
-            password: "1234",
+           ...user,
+          username : "ddd",
         };
     }
     return user;
