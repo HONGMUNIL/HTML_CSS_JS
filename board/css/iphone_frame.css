@@ -1,0 +1,76 @@
+/*
+write.html div root > div container create > 
+root&container reset.css create(기본 html,body font설정) >
+iphone_frame.css생성해서 root container 디자인>
+다음 write.html에서 phone header 만들고 css에서 디자인>
+
+
+*/
+
+
+#root {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: #dbdbdb;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    box-sizing: border-box;
+    width: 402px;
+    height: 874px;
+    border: 4px solid #afafaf;
+    border-radius: 45px;
+    box-shadow: 0px 0px 2px 5px #000000 inset;
+    overflow: hidden;
+
+}
+
+.phone-header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+
+}
+
+.dynamic-island {
+    box-sizing: border-box;
+    border-radius: 25px;
+    width: 150px;
+    height: 25px;
+    background-color: #000000;
+}
+
+.phone-header-left,
+.phone-header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+    padding: 0px 10px;
+
+
+}
+
+.phone-header-left {
+   
+
+    & > .phone-clock{
+        font-weight: 600;
+    }
+}
+
+.phone-header-right {
+
+    & svg {
+        width: 20px;
+        margin-left: 3px;
+    }
+}
