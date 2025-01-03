@@ -1,0 +1,25 @@
+.main-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+
+    & input,
+    & textarea {     
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        padding: 15px 20px;
+        background-color: #fafafa;
+        
+
+    }
+
+    & textarea{
+        flex-grow: 1;
+       
+    }
+
+}
+
+

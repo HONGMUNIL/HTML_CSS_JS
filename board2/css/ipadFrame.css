@@ -24,31 +24,32 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-   
+
 }
 
 .ipad-header-left,  
 .ipad-header-right{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 15px 0px 25px;
+    padding: 25px 0px 0px 40px;
     width: 100px;
     height: 100%;
 }
 
 .ipad-header-left{
+    width: fit-content;
     & > .ipad-clock{
-        font-weight: 600;
+       font-size: 14px;
+        font-weight: 500;
         color: #000000;
         cursor: default;
+        
     }
 }
 
 .ipad-header-right{  
     & > svg{
-        width: 20px;
-        height: 20px;
+        width: 17px;
+        height: 17px;
         margin-left: 3px;
         fill: black;
         stroke: black;
