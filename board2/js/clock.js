@@ -7,7 +7,7 @@ function clockRun(){
         const nowClockText = `${nowHours}:${nowMinutes}`;
         ipadClock.innerHTML = nowClockText;
     
-    },1000);
+    }, 1000);
 }
 
 clockRun();
