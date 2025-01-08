@@ -19,19 +19,19 @@
                     </div>
                     <div class="body">
                         <div class="body-container-1">
-                            <input type="text" placeholder="Username">
+                            <input class="login-username" type="text" placeholder="Username">
                         </div>
                         <div class="body-container-2">
-                            <input type="text" placeholder="Password">
+                            <input class="login-password" type="text" placeholder="Password">
                         </div>
                         <div class="body-container-3">
-                            <button class="button-blue">
+                            <button class="button-login" onclick="loginUser()">
                                 Login
                             </button>
                         </div>
                         <div class="body-container-4">
                             Don't hava an account?
-                            <a href="">Sign up</a>
+                            <a class="signup-button" href="javascript:void(0);">Sign up</a>
                         </div>
                     </div>
                 </div>
@@ -39,6 +39,9 @@
             </main>
         </div>
     </div>
+
+    <script src="./js/login.js"></script>
+    <script src="./js/signup.js"></script>
 </body>
 
 </html>
